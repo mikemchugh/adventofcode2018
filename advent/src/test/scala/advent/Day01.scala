@@ -18,4 +18,13 @@ class FrequencySpec extends FlatSpec with Matchers {
     val input = readInput("input/day01").map(_.toInt)
     Day01.frequency(input) shouldEqual 435
   }
+
+  "firstRepeatingFrequency" should "get the first repeated frequency" in {
+    Day01.firstRepeatingFrequency(List(1, -2, 3, 1)) shouldEqual 2
+  }
+
+  "firstRepeatingFrequency" should "get the second star" in {
+    val input = readInput("input/day01").map(_.toInt)
+    Day01.firstRepeatingFrequency(input) shouldEqual 245
+  }
 }
